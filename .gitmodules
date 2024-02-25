@@ -1,0 +1,3 @@
+[submodule ".config/tmux"]
+	path = .config/tmux
+	url = https://github.com/linux-terminal-setup/tmux-config
