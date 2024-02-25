@@ -5,7 +5,8 @@
 1. Install GNU stow.
 2. Clone this repo into your home folder with `git clone https://github.com/linux-terminal-setup/morne-setup ~/dotfiles`
 3. `cd` into the `dotfiles` direcotry.
-4. Run `stow .` in this directory.
+4. [VERY IMPORTANT] run `git submodule update --init --recursive` in the `dotfiles` directory to fetch submodules.
+5. Run `stow .` in this directory.
 
 ## What's included
 
