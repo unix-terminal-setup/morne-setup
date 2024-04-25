@@ -8,6 +8,7 @@ local sources = {
   formatting.markdownlint,
   formatting.gdformat,
   formatting.csharpier,
+  formatting.yq.with({filetypes = {"csv"}}),
   lint.shellcheck
 }
 
