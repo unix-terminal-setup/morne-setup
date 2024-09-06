@@ -23,6 +23,7 @@ alias gits='git status'
 alias weather='curl wttr.in/Randburg'
 alias vim='nvim'
 alias lg='lazygit'
+alias gd-format='gdformat $(find . -name "*.gd")'
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export ASPNETCORE_ENVIRONMENT=Development
