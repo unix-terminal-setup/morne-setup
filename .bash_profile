@@ -18,12 +18,13 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export SDKROOT=$(xcrun --sdk macosx --show-sdk-path)
 
-alias ls='lsd -alhG'
+alias ls='lsd -Alh'
 alias gits='git status'
 alias weather='curl wttr.in/Randburg'
 alias vim='nvim'
 alias lg='lazygit'
 alias gd-format='gdformat $(find . -name "*.gd")'
+alias web-check='~/tools/internet-check.sh'
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export ASPNETCORE_ENVIRONMENT=Development
