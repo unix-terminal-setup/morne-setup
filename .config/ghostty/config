@@ -1,0 +1,7 @@
+font-size = 14
+window-inherit-font-size = false
+theme = catppuccin-mocha
+title = "Terminal"
+window-padding-x = 15
+window-padding-y = 20
+macos-option-as-alt = true
