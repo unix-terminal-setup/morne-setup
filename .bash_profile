@@ -23,6 +23,7 @@ alias gits='git status'
 alias weather='curl wttr.in/Randburg'
 alias vim='nvim'
 alias lg='lazygit'
+alias y='yazi'
 alias gd-format='gdformat $(find . -name "*.gd" -not -path "./addons/*")'
 alias web-check='~/tools/internet-check.sh'
 eval "$(/opt/homebrew/bin/brew shellenv)"

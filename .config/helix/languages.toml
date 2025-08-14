@@ -1,0 +1,61 @@
+[language-server]
+biome = { command = "biome", args = ["lsp-proxy"] }
+godot = { command = "nc", args = ["127.0.0.1", "6005"]}
+
+[[language]]
+name = "javascript"
+language-servers = [
+  { name = "typescript-language-server", except-features = [
+    "format",
+  ] },
+  "biome",
+]
+auto-format = true
+
+[[language]]
+name = "typescript"
+language-servers = [
+  { name = "typescript-language-server", except-features = [
+    "format",
+  ] },
+  "biome",
+]
+auto-format = true
+
+[[language]]
+name = "tsx"
+language-servers = [
+  { name = "typescript-language-server", except-features = [
+    "format",
+  ] },
+  "biome",
+]
+auto-format = true
+
+[[language]]
+name = "jsx"
+language-servers = [
+  { name = "typescript-language-server", except-features = [
+    "format",
+  ] },
+  "biome",
+]
+auto-format = true
+
+[[language]]
+name = "json"
+language-servers = [
+  { name = "typescript-language-server", except-features = [
+    "format",
+  ] },
+  "biome",
+]
+
+[[language]]
+name = "toml"
+roots = ["."]
+language-servers = ["taplo"]
+
+[[language]]
+name = "gdscript"
+language-servers = ["godot"]

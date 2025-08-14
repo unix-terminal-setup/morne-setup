@@ -15,3 +15,7 @@
 3. A NeoVim stup with NvChad and basic LSP support for Typescript and C#.
 - Make sure to install the Typescript language server.
 - Make sure to install the .NET SDK and Omnisharp on the correct paths (see custom config)
+4. Ghostty terminal config.
+5. Helix editor config.
+6. Yazi file explorer config.
+7. (Not included) LazyGit used as git client.

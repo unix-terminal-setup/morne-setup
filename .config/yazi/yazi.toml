@@ -1,0 +1,5 @@
+[mgr]
+show_hidden = true
+
+[opener]
+edit = [{ run = 'hx "$@"', block = true }]

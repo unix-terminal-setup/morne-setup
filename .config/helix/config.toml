@@ -19,3 +19,12 @@ select = "block"
 
 [editor.indent-guides]
 render = true
+
+[keys.normal."space"]
+"." = ":format"
+
+[editor.soft-wrap]
+enable = true
+
+[editor.lsp]
+display-progress-messages = true
