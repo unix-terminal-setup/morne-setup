@@ -22,6 +22,7 @@ render = true
 
 [keys.normal."space"]
 "." = ":format"
+"q" = ":bc"
 
 [editor.soft-wrap]
 enable = true
