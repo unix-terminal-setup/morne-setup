@@ -29,3 +29,6 @@ enable = true
 
 [editor.lsp]
 display-progress-messages = true
+
+[editor.file-picker]
+hidden = false
