@@ -18,4 +18,5 @@
 4. Ghostty terminal config.
 5. Helix editor config.
 6. Yazi file explorer config.
-7. (Not included) LazyGit used as git client.
+7. Zellij multiplexer config.
+8. (Not included) LazyGit used as git client.
