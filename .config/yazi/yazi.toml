@@ -3,3 +3,4 @@ show_hidden = true
 
 [opener]
 edit = [{ run = 'hx "$@"', block = true }]
+open = [{ run = 'glow --tui "$@"', block = true }]
