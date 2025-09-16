@@ -1,6 +1,6 @@
 font-size = 14
 window-inherit-font-size = false
-theme = catppuccin-mocha
+theme = catppuccin-mocha.conf
 title = "Terminal"
 window-padding-x = 15
 window-padding-y = 20
