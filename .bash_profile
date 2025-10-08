@@ -30,9 +30,5 @@ alias web-check='~/tools/internet-check.sh'
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export ASPNETCORE_ENVIRONMENT=Development
-export DOTNET_ROOT="/usr/local/share/dotnet"
-export PATH="/usr/local/share/dotnet:$PATH"
 export PATH="/Users/morne/Library/Python/3.9/bin:$PATH"
-export PATH="/usr/local/share/omnisharp:$PATH"
-export PATH="$HOME/.dotnet/tools:$PATH"
 

@@ -1,6 +1,6 @@
 [language-server]
 biome = { command = "biome", args = ["lsp-proxy"] }
-godot = { command = "nc", args = ["127.0.0.1", "6005"]}
+godot = { command = "nc", args = ["127.0.0.1", "6005"] }
 
 [[language]]
 name = "javascript"
@@ -59,3 +59,9 @@ language-servers = ["taplo"]
 [[language]]
 name = "gdscript"
 language-servers = ["godot"]
+
+[[language]]
+name = "c-sharp"
+language-servers = ["csharp-ls"]
+auto-format = true
+formatter = { command = "csharpier", args = ["format"] }
