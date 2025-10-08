@@ -2,5 +2,10 @@
 show_hidden = true
 
 [opener]
-edit = [{ run = 'hx "$@"', block = true }]
-open = [{ run = 'glow --tui "$@"', block = true }]
+edit = [
+  { run = 'hx "$@"', block = true, cwd = "git rev-parse --show-toplevel || pwd" },
+]
+open = [
+  { run = 'glow --tui "$@"', block = true, for = "text/markdown" },
+  { run = 'hx "$@"', block = true, cwd = "git rev-parse --show-toplevel || pwd" },
+]
