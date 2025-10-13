@@ -9,6 +9,7 @@ omnisharp = { command = "dotnet", args = [
   "RoslynExtensionsOptions:enableImportCompletion=true",
   "RoslynExtensionsOptions:diagnosticWorkersThreadCount=8",
   "FormattingOptions:enableEditorConfigSupport=true",
+  "RoslynExtensionsOptions.analyzeOpenDocumentsOnly=true",
 ] }
 
 [[language]]
