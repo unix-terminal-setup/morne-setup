@@ -33,5 +33,15 @@
     "mode": "system",
     "light": "Catppuccin Macchiato - No Italics",
     "dark": "Catppuccin Mocha - No Italics"
+  },
+  "languages": {
+    "GDScript": {
+      "formatter": {
+        "external": {
+          "command": "gdformat",
+          "arguments": ["-"]
+        }
+      }
+    }
   }
 }
