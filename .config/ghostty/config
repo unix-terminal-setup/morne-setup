@@ -5,3 +5,5 @@ title = "Terminal"
 window-padding-x = 15
 window-padding-y = 20
 macos-option-as-alt = true
+window-width = 110
+window-height = 50
