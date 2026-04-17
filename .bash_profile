@@ -20,15 +20,15 @@ export SDKROOT=$(xcrun --sdk macosx --show-sdk-path)
 
 alias ls='lsd -Alh'
 alias gits='git status'
-alias weather='curl wttr.in/Randburg'
-alias vim='nvim'
 alias lg='lazygit'
 alias y='yazi'
 alias zellij='~/.zellij/zellij'
-alias gd-format='gdformat $(find . -name "*.gd" -not -path "./addons/*")'
 alias web-check='~/tools/internet-check.sh'
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export ASPNETCORE_ENVIRONMENT=Development
-export PATH="/Users/morne/Library/Python/3.9/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
