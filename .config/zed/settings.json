@@ -7,42 +7,91 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
-  "restore_on_startup": "last_workspace",
-  "icon_theme": "Catppuccin Mocha",
-  "features": {
-    "edit_prediction_provider": "none"
+  "project_panel": {
+    "hide_root": false,
+    "auto_fold_dirs": false,
   },
+  "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
+        },
+      },
+      "enable_lsp_tasks": true,
+    },
+  },
+  "disable_ai": true,
+  "restore_on_startup": "empty_tab",
+  "icon_theme": "Catppuccin Mocha",
   "telemetry": {
-    "metrics": false
+    "metrics": false,
   },
   "tab_bar": {
     "show": true,
-    "show_nav_history_buttons": false
+    "show_nav_history_buttons": false,
   },
   "tabs": {
     "file_icons": true,
-    "git_status": true
+    "git_status": true,
   },
   "terminal": {
     "dock": "bottom",
-    "font_family": "FiraCode Nerd Font Mono"
+    "font_family": "FiraCode Nerd Font Mono",
   },
   "vim_mode": true,
-  "ui_font_size": 14,
-  "buffer_font_size": 14,
+  "ui_font_size": 15.0,
+  "buffer_font_size": 15.0,
   "theme": {
     "mode": "system",
     "light": "Catppuccin Macchiato - No Italics",
-    "dark": "Catppuccin Mocha - No Italics"
+    "dark": "Catppuccin Mocha - No Italics",
   },
+  "language_servers": ["!eslint", "..."],
   "languages": {
+    "JSON": {
+      "formatter": {
+        "language_server": {
+          "name": "biome",
+        },
+      },
+    },
+    "TypeScript": {
+      "formatter": {
+        "language_server": {
+          "name": "biome",
+        },
+      },
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true,
+      },
+    },
+    "TSX": {
+      "formatter": {
+        "language_server": {
+          "name": "biome",
+        },
+      },
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true,
+      },
+    },
     "GDScript": {
       "formatter": {
         "external": {
           "command": "gdformat",
-          "arguments": ["-"]
-        }
-      }
-    }
-  }
+          "arguments": ["-"],
+        },
+      },
+    },
+  },
 }
