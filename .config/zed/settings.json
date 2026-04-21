@@ -45,6 +45,9 @@
   "terminal": {
     "dock": "bottom",
     "font_family": "FiraCode Nerd Font Mono",
+    "shell": {
+      "program": "bash",
+    },
   },
   "vim_mode": true,
   "ui_font_size": 15.0,
@@ -54,26 +57,9 @@
     "light": "Catppuccin Macchiato - No Italics",
     "dark": "Catppuccin Mocha - No Italics",
   },
-  "language_servers": ["!eslint", "..."],
   "languages": {
-    "JSON": {
-      "formatter": {
-        "language_server": {
-          "name": "biome",
-        },
-      },
-    },
-    "TypeScript": {
-      "formatter": {
-        "language_server": {
-          "name": "biome",
-        },
-      },
-      "code_actions_on_format": {
-        "source.fixAll.biome": true,
-        "source.organizeImports.biome": true,
-      },
-    },
+    "JSON": {},
+    "TypeScript": {},
     "TSX": {
       "formatter": {
         "language_server": {
@@ -83,14 +69,6 @@
       "code_actions_on_format": {
         "source.fixAll.biome": true,
         "source.organizeImports.biome": true,
-      },
-    },
-    "GDScript": {
-      "formatter": {
-        "external": {
-          "command": "gdformat",
-          "arguments": ["-"],
-        },
       },
     },
   },
