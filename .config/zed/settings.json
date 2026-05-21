@@ -7,7 +7,26 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+  "show_wrap_guides": true,
+  "preferred_line_length": 120,
+  "wrap_guides": [120, 120],
+  "buffer_line_height": "comfortable",
+  "outline_panel": {
+    "dock": "left",
+  },
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "git_panel": {
+    "dock": "left",
+  },
   "project_panel": {
+    "dock": "left",
     "hide_root": false,
     "auto_fold_dirs": false,
   },
@@ -47,8 +66,8 @@
     "font_family": "FiraCode Nerd Font Mono",
   },
   "vim_mode": true,
-  "ui_font_size": 15.0,
-  "buffer_font_size": 15.0,
+  "ui_font_size": 13.0,
+  "buffer_font_size": 13.0,
   "theme": {
     "mode": "system",
     "light": "Catppuccin Macchiato - No Italics",
@@ -89,7 +108,7 @@
       "formatter": {
         "external": {
           "command": "gdformat",
-          "arguments": ["-"],
+          "arguments": ["--line-length", "120", "-"],
         },
       },
     },
