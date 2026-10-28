@@ -15,10 +15,11 @@
   },
   "diff_view_style": "split",
   "soft_wrap": "editor_width",
-  "auto_update_extensions": {
-    "csharp": false,
-  },
   "cli_default_open_behavior": "new_window",
+  "show_wrap_guides": true,
+  "preferred_line_length": 120,
+  "wrap_guides": [120, 120],
+  "buffer_line_height": "comfortable",
   "outline_panel": {
     "dock": "left",
   },
