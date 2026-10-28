@@ -3,12 +3,14 @@
 // versions can be diffed against it. Layouts live in ./layouts.
 //
 // Mode keys differ from the defaults:
-//   Ctrl p pane, Ctrl b tab, Ctrl n resize, Ctrl h move, Ctrl s scroll,
-//   Ctrl e session, Ctrl t tmux, Ctrl g lock
+//   Alt p pane, Alt b tab, Alt r resize, Alt m move, Alt s scroll,
+//   Alt e session, Alt t tmux, Alt g lock, Alt q quit
+//   Focus is Alt Shift h/j/k/l (or Alt arrows), move tab Alt u/o.
+//   Ctrl and Alt h/i/v are left free for NvChad.
 
 keybinds clear-defaults=true {
     locked {
-        bind "Ctrl g" { SwitchToMode "normal"; }
+        bind "Alt g" { SwitchToMode "normal"; }
     }
     pane {
         bind "left" { MoveFocus "left"; }
@@ -28,7 +30,7 @@ keybinds clear-defaults=true {
         bind "n" { NewPane; SwitchToMode "normal"; }
         bind "p" { SwitchFocus; }
         bind ";" { FocusLastPane; }
-        bind "Ctrl p" { SwitchToMode "normal"; }
+        bind "Alt p" { SwitchToMode "normal"; }
         bind "r" { NewPane "right"; SwitchToMode "normal"; }
         bind "s" { NewPane "stacked"; SwitchToMode "normal"; }
         bind "w" { ToggleFloatingPanes; SwitchToMode "normal"; }
@@ -58,7 +60,7 @@ keybinds clear-defaults=true {
         bind "n" { NewTab; SwitchToMode "normal"; }
         bind "r" { SwitchToMode "renametab"; TabNameInput 0; }
         bind "s" { ToggleActiveSyncTab; SwitchToMode "normal"; }
-        bind "Ctrl b" { SwitchToMode "normal"; }
+        bind "Alt b" { SwitchToMode "normal"; }
         bind "x" { CloseTab; SwitchToMode "normal"; }
         bind "tab" { ToggleTab; }
     }
@@ -78,7 +80,7 @@ keybinds clear-defaults=true {
         bind "j" { Resize "Increase down"; }
         bind "k" { Resize "Increase up"; }
         bind "l" { Resize "Increase right"; }
-        bind "Ctrl n" { SwitchToMode "normal"; }
+        bind "Alt r" { SwitchToMode "normal"; }
     }
     move {
         bind "left" { MovePane "left"; }
@@ -86,7 +88,7 @@ keybinds clear-defaults=true {
         bind "up" { MovePane "up"; }
         bind "right" { MovePane "right"; }
         bind "h" { MovePane "left"; }
-        bind "Ctrl h" { SwitchToMode "normal"; }
+        bind "Alt m" { SwitchToMode "normal"; }
         bind "j" { MovePane "down"; }
         bind "k" { MovePane "up"; }
         bind "l" { MovePane "right"; }
@@ -121,7 +123,7 @@ keybinds clear-defaults=true {
             }
             SwitchToMode "normal"
         }
-        bind "Ctrl e" { SwitchToMode "normal"; }
+        bind "Alt e" { SwitchToMode "normal"; }
         bind "[" { FocusGuestSession; SwitchToMode "normal"; }
         bind "]" { FocusHostSession; SwitchToMode "normal"; }
         bind "f" { ToggleHostFullscreen; SwitchToMode "normal"; }
@@ -165,38 +167,37 @@ keybinds clear-defaults=true {
         bind "Alt [" { PreviousSwapLayout; }
         bind "Alt ]" { NextSwapLayout; }
         bind "Alt f" { ToggleFloatingPanes; }
-        bind "Ctrl g" { SwitchToMode "locked"; }
-        bind "Alt h" { MoveFocusOrTab "left"; }
-        bind "Alt i" { MoveTab "left"; }
-        bind "Alt j" { MoveFocus "down"; }
-        bind "Alt k" { MoveFocus "up"; }
-        bind "Alt l" { MoveFocusOrTab "right"; }
+        bind "Alt g" { SwitchToMode "locked"; }
+        bind "Alt Shift h" { MoveFocusOrTab "left"; }
+        bind "Alt u" { MoveTab "left"; }
+        bind "Alt Shift j" { MoveFocus "down"; }
+        bind "Alt Shift k" { MoveFocus "up"; }
+        bind "Alt Shift l" { MoveFocusOrTab "right"; }
         bind "Alt n" { NewPane; }
         bind "Alt o" { MoveTab "right"; }
-        bind "Alt p" { TogglePaneInGroup; }
         bind "Alt Shift p" { ToggleGroupMarking; }
-        bind "Ctrl q" { Quit; }
+        bind "Alt q" { Quit; }
     }
     shared_except "locked" "move" {
-        bind "Ctrl h" { SwitchToMode "move"; }
+        bind "Alt m" { SwitchToMode "move"; }
     }
     shared_except "locked" "session" {
-        bind "Ctrl e" { SwitchToMode "session"; }
+        bind "Alt e" { SwitchToMode "session"; }
     }
     shared_except "locked" "scroll" "search" "tmux" {
-        bind "Ctrl t" { SwitchToMode "tmux"; }
+        bind "Alt t" { SwitchToMode "tmux"; }
     }
     shared_except "locked" "scroll" "search" {
-        bind "Ctrl s" { SwitchToMode "scroll"; }
+        bind "Alt s" { SwitchToMode "scroll"; }
     }
     shared_except "locked" "tab" {
-        bind "Ctrl b" { SwitchToMode "tab"; }
+        bind "Alt b" { SwitchToMode "tab"; }
     }
     shared_except "locked" "pane" {
-        bind "Ctrl p" { SwitchToMode "pane"; }
+        bind "Alt p" { SwitchToMode "pane"; }
     }
     shared_except "locked" "resize" {
-        bind "Ctrl n" { SwitchToMode "resize"; }
+        bind "Alt r" { SwitchToMode "resize"; }
     }
     shared_except "normal" "locked" "entersearch" {
         bind "enter" { SwitchToMode "normal"; }
@@ -222,7 +223,7 @@ keybinds clear-defaults=true {
         bind "j" { ScrollDown; }
         bind "k" { ScrollUp; }
         bind "l" { PageScrollDown; }
-        bind "Ctrl s" { SwitchToMode "normal"; }
+        bind "Alt s" { SwitchToMode "normal"; }
         bind "u" { HalfPageScrollUp; }
         bind "[" { ScrollToPreviousPrompt; }
         bind "]" { ScrollToNextPrompt; }
@@ -255,7 +256,7 @@ keybinds clear-defaults=true {
         bind "%" { NewPane "right"; SwitchToMode "normal"; }
         bind "," { SwitchToMode "renametab"; }
         bind "[" { SwitchToMode "scroll"; }
-        bind "Ctrl t" { Write 20; SwitchToMode "normal"; }
+        bind "Alt t" { Write 27 116; SwitchToMode "normal"; }
         bind "c" { NewTab; SwitchToMode "normal"; }
         bind "h" { MoveFocus "left"; SwitchToMode "normal"; }
         bind "j" { MoveFocus "down"; SwitchToMode "normal"; }
@@ -285,12 +286,11 @@ plugins {
         format_space "#[bg=$bar]"
 
         // : powerline arrows, as drawn by zellij:tab-bar
-        tab_normal "#[bg=$text,fg=$bar]#[bg=$text,fg=$bar,bold] {index}: {name} {floating_indicator}#[bg=$bar,fg=$text]"
-        tab_active "#[bg=$green,fg=$bar]#[bg=$green,fg=$bar,bold] {index}: {name} {sync_indicator}{fullscreen_indicator}{floating_indicator}#[bg=$bar,fg=$green]"
+        tab_normal "#[bg=$text,fg=$bar]#[bg=$text,fg=$bar,bold] {index}: {name} #[bg=$bar,fg=$text]"
+        tab_active "#[bg=$green,fg=$bar]#[bg=$green,fg=$bar,bold] {index}: {name} {sync_indicator}{fullscreen_indicator}#[bg=$bar,fg=$green]"
         tab_separator ""
         tab_sync_indicator "(SYNC) "
         tab_fullscreen_indicator "(FULLSCREEN) "
-        tab_floating_indicator "(FLOATING) "
     }
     status-bar location="zellij:status-bar"
     strider location="zellij:strider"
