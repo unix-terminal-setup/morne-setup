@@ -7,6 +7,15 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+  "window_decorations": "client",
+  "bottom_dock_layout": "contained",
+  "title_bar": {
+    "show_menus": false,
+    "show_branch_status_icon": false
+  },
+  "diff_view_style": "split",
+  "soft_wrap": "editor_width",
+  "cli_default_open_behavior": "new_window",
   "show_wrap_guides": true,
   "preferred_line_length": 120,
   "wrap_guides": [120, 120],
@@ -23,6 +32,8 @@
     "model_parameters": [],
   },
   "git_panel": {
+    "group_by": "staging",
+    "tree_view": true,
     "dock": "left",
   },
   "project_panel": {
@@ -46,10 +57,29 @@
       },
       "enable_lsp_tasks": true,
     },
+    "csharp-ls": {
+      "settings": {
+        "logLevel": "information",
+        "applyFormattingOptions": true,
+        "analyzersEnabled": true,
+        "useMetadataUris": true,
+        "razorSupport": false,
+        "solutionPathOverride": null,
+        "locale": null,
+        "debug": {
+          "debugMode": false,
+          "solutionLoadDelay": null,
+        },
+      },
+    },
   },
   "disable_ai": true,
   "restore_on_startup": "empty_tab",
-  "icon_theme": "Catppuccin Mocha",
+  "icon_theme": {
+    "mode": "light",
+    "light": "Catppuccin Mocha",
+    "dark": "Catppuccin Mocha",
+  },
   "telemetry": {
     "metrics": false,
   },
@@ -62,37 +92,25 @@
     "git_status": true,
   },
   "terminal": {
+    "starts_open": true,
+    "show_count_badge": false,
     "dock": "bottom",
     "font_family": "FiraCode Nerd Font Mono",
+    "shell": {
+      "program": "bash",
+    },
   },
   "vim_mode": true,
   "ui_font_size": 13.0,
   "buffer_font_size": 13.0,
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "Catppuccin Macchiato - No Italics",
-    "dark": "Catppuccin Mocha - No Italics",
+    "dark": "Catppuccin Mocha",
   },
-  "language_servers": ["!eslint", "..."],
   "languages": {
-    "JSON": {
-      "formatter": {
-        "language_server": {
-          "name": "biome",
-        },
-      },
-    },
-    "TypeScript": {
-      "formatter": {
-        "language_server": {
-          "name": "biome",
-        },
-      },
-      "code_actions_on_format": {
-        "source.fixAll.biome": true,
-        "source.organizeImports.biome": true,
-      },
-    },
+    "JSON": {},
+    "TypeScript": {},
     "TSX": {
       "formatter": {
         "language_server": {
@@ -104,13 +122,9 @@
         "source.organizeImports.biome": true,
       },
     },
-    "GDScript": {
-      "formatter": {
-        "external": {
-          "command": "gdformat",
-          "arguments": ["--line-length", "120", "-"],
-        },
-      },
+    "CSharp": {
+      "language_servers": ["csharp-ls", "!roslyn", "!omnisharp", "..."],
+      "format_on_save": "on",
     },
   },
 }
