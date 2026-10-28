@@ -3,9 +3,5 @@ show_hidden = true
 
 [opener]
 edit = [
-  { run = 'hx "$@"', block = true, cwd = "git rev-parse --show-toplevel || pwd" },
-]
-open = [
-  { run = 'glow --tui "$@"', block = true, for = "text/markdown" },
-  { run = 'hx "$@"', block = true, cwd = "git rev-parse --show-toplevel || pwd" },
+  { run = "vim %s", block = true, for = "unix" },
 ]
