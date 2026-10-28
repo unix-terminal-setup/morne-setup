@@ -9,3 +9,8 @@ window-width = 110
 window-height = 50
 fullscreen = false
 maximize = true
+
+# Ghostty maps Option+arrows to esc:b / esc:f (word jump) by default, which
+# zellij sees as Alt b / Alt f. Pass the real Alt+arrow through instead.
+keybind = alt+arrow_left=unbind
+keybind = alt+arrow_right=unbind
