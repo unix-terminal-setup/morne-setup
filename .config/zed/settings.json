@@ -16,6 +16,8 @@
   "diff_view_style": "split",
   "soft_wrap": "editor_width",
   "cli_default_open_behavior": "new_window",
+  "on_new_window": "launchpad",
+  "format_on_save": "on",
   "show_wrap_guides": true,
   "preferred_line_length": 120,
   "wrap_guides": [120, 120],
@@ -125,6 +127,16 @@
     "CSharp": {
       "language_servers": ["csharp-ls", "!roslyn", "!omnisharp", "..."],
       "format_on_save": "on",
+    },
+    "CSharp": {
+      "language_servers": ["csharp-ls", "!roslyn-language-server", "!omnisharp"],
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "dotnet",
+          "arguments": ["csharpier", "format"],
+        },
+      },
     },
   },
 }
