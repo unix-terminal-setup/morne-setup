@@ -26,6 +26,7 @@ alias web-check='~/tools/internet-check.sh'
 alias no-sleep='~/tools/nosleep.sh'
 alias gd-format='gdformat $(find . -name "*.gd" -not -path "./addons/*")'
 alias web-check='~/tools/internet-check.sh'
+alias z='zellij attach -c DEV'
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 

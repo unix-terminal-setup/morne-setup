@@ -1,0 +1,13 @@
+// Zellij's default layout, with a blank row under the tab bar.
+// Swap layouts (Alt [ / Alt ]) live in default.swap.kdl.
+layout {
+    // size=2: the tab bar only draws on its first row, so the second row
+    // stays blank and leaves a gap between the tab bar and the panes
+    pane size=2 borderless=true {
+        plugin location="tab-bar"
+    }
+    pane
+    pane size=1 borderless=true {
+        plugin location="status-bar"
+    }
+}
