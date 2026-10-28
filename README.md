@@ -10,7 +10,19 @@
 ## What's included
 
 1. My `.bash_profile`.
-2. A NeoVim setup. 
+2. A NeoVim setup. Requires:
+    - Neovim 0.12+
+    - A Nerd Font
+    - ripgrep
+    - tree-sitter CLI 0.26.1+
+    - A C compiler
+    - Node.js and npm
+    - .NET SDK
+
+    Language servers and formatters are installed automatically by Mason on startup, based on
+    the servers in [`lua/configs/lspconfig.lua`](.config/nvim/lua/configs/lspconfig.lua) and the formatters in
+    [`lua/configs/conform.lua`](.config/nvim/lua/configs/conform.lua). Add or remove them there.
+    Extra tools go in `M.mason.pkgs` in [`lua/chadrc.lua`](.config/nvim/lua/chadrc.lua).
 3. Ghostty terminal config.
 4. Yazi file explorer config.
 5. Zellij multiplexer config.
