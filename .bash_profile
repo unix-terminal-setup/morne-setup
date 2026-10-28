@@ -22,9 +22,10 @@ alias ls='lsd -Alh'
 alias gits='git status'
 alias lg='lazygit'
 alias y='yazi'
-alias zellij='~/.zellij/zellij'
 alias web-check='~/tools/internet-check.sh'
 alias no-sleep='~/tools/nosleep.sh'
+alias gd-format='gdformat $(find . -name "*.gd" -not -path "./addons/*")'
+alias web-check='~/tools/internet-check.sh'
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 
