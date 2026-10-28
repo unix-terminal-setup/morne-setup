@@ -23,6 +23,9 @@
     the servers in [`lua/configs/lspconfig.lua`](.config/nvim/lua/configs/lspconfig.lua) and the formatters in
     [`lua/configs/conform.lua`](.config/nvim/lua/configs/conform.lua). Add or remove them there.
     Extra tools go in `M.mason.pkgs` in [`lua/chadrc.lua`](.config/nvim/lua/chadrc.lua).
+
+    If startup errors after an NvChad update, run `nvim --headless "+Lazy! restore" "+Lazy! clean" "+Lazy! build base46" +qa`.
+
 3. Ghostty terminal config.
 4. Yazi file explorer config.
 5. Zellij multiplexer config.
