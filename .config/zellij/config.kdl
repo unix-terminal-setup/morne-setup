@@ -271,7 +271,27 @@ keybinds clear-defaults=true {
 // Plugin aliases - can be used to change the implementation of Zellij
 // changing these requires a restart to take effect
 plugins {
-    tab-bar location="zellij:tab-bar"
+    // zjstatus instead of zellij:tab-bar, so tabs show "<index>: <name>"
+    // and match GoToTab numbers. Styled like the stock tab bar, using the
+    // ribbon/text colors of zellij's built-in catppuccin-macchiato theme.
+    tab-bar location="https://github.com/dj95/zjstatus/releases/download/v0.25.0/zjstatus.wasm" {
+        color_bar "#1e2030"
+        color_text "#cad3f5"
+        color_green "#a6da95"
+        color_peach "#f5a97f"
+
+        format_left "#[bg=$bar,fg=$peach,bold] {session} {tabs}"
+        format_right "#[bg=$bar,fg=$text]{swap_layout} "
+        format_space "#[bg=$bar]"
+
+        // : powerline arrows, as drawn by zellij:tab-bar
+        tab_normal "#[bg=$text,fg=$bar]#[bg=$text,fg=$bar,bold] {index}: {name} {floating_indicator}#[bg=$bar,fg=$text]"
+        tab_active "#[bg=$green,fg=$bar]#[bg=$green,fg=$bar,bold] {index}: {name} {sync_indicator}{fullscreen_indicator}{floating_indicator}#[bg=$bar,fg=$green]"
+        tab_separator ""
+        tab_sync_indicator "(SYNC) "
+        tab_fullscreen_indicator "(FULLSCREEN) "
+        tab_floating_indicator "(FLOATING) "
+    }
     status-bar location="zellij:status-bar"
     strider location="zellij:strider"
     compact-bar location="zellij:compact-bar"
