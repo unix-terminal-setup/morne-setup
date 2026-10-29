@@ -5,7 +5,8 @@
 // Mode keys differ from the defaults:
 //   Alt p pane, Alt b tab, Alt r resize, Alt m move, Alt s scroll,
 //   Alt e session, Alt t tmux, Alt g lock, Alt q quit
-//   Focus is Alt Shift h/j/k/l (or Alt arrows), move tab Alt u/o.
+//   Focus is Alt Shift h/j/k/l (or Alt up/down), move tab Alt u/o.
+//   Alt left/right are left free for word-skipping in the shell.
 //   Ctrl and Alt h/i/v are left free for NvChad.
 
 keybinds clear-defaults=true {
@@ -157,10 +158,8 @@ keybinds clear-defaults=true {
         }
     }
     shared_except "locked" {
-        bind "Alt left" { MoveFocusOrTab "left"; }
         bind "Alt down" { MoveFocus "down"; }
         bind "Alt up" { MoveFocus "up"; }
-        bind "Alt right" { MoveFocusOrTab "right"; }
         bind "Alt +" { Resize "Increase"; }
         bind "Alt -" { Resize "Decrease"; }
         bind "Alt =" { Resize "Increase"; }
