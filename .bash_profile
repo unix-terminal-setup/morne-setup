@@ -21,7 +21,6 @@ export SDKROOT=$(xcrun --sdk macosx --show-sdk-path)
 alias ls='lsd -Alh'
 alias gits='git status'
 alias weather='curl wttr.in/Randburg'
-alias vim='nvim'
 alias lg='lazygit'
 alias y='yazi'
 alias gd-format='gdformat $(find . -name "*.gd" -not -path "./addons/*")'
