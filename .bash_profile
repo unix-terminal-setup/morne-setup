@@ -20,6 +20,7 @@ export SDKROOT=$(xcrun --sdk macosx --show-sdk-path)
 
 alias ls='lsd -Alh'
 alias gits='git status'
+alias weather='curl wttr.in/Randburg'
 alias lg='lazygit'
 alias y='yazi'
 alias web-check='~/tools/internet-check.sh'
