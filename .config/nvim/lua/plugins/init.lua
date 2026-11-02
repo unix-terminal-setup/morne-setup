@@ -37,10 +37,18 @@ return {
 	},
 
 	{
+		-- main branch: no ensure_installed or auto highlight, so install and start it ourselves
 		"nvim-treesitter/nvim-treesitter",
-		opts = {
-			ensure_installed = {
-				-- NvChad defaults, this list replaces rather than extends them
+		branch = "main",
+		lazy = false,
+		build = ":TSUpdate",
+		config = function()
+			pcall(function()
+				dofile(vim.g.base46_cache .. "syntax")
+				dofile(vim.g.base46_cache .. "treesitter")
+			end)
+
+			require("nvim-treesitter").install {
 				"lua",
 				"luadoc",
 				"printf",
@@ -50,7 +58,14 @@ return {
 				"typescript",
 				"tsx",
 				"c_sharp",
-			},
-		},
+			}
+
+			vim.api.nvim_create_autocmd("FileType", {
+				pattern = { "cs", "javascript", "typescript", "typescriptreact", "lua", "vim" },
+				callback = function(args)
+					pcall(vim.treesitter.start, args.buf)
+				end,
+			})
+		end,
 	},
 }
