@@ -6,19 +6,16 @@ vim.api.nvim_create_autocmd("User", {
 	pattern = "VeryLazy",
 	once = true,
 	callback = function()
-		-- load these first so their servers and formatters are known
-		require("lazy").load { plugins = { "nvim-lspconfig", "conform.nvim", "mason.nvim" } }
-
+		local packages = require("tools").mason_packages()
 		local registry = require "mason-registry"
 
 		registry.refresh(function()
-			for _, tool in ipairs(require("nvchad.mason").get_pkgs()) do
-				local name, version = tool:match "^([^@]+)@?(.*)$"
-				local pkg = registry.get_package(name)
+			for _, package in ipairs(packages) do
+				local pkg = registry.get_package(package.name)
 
 				if not pkg:is_installed() and not pkg:is_installing() then
-					vim.notify("Mason: installing " .. name)
-					pkg:install { version = version ~= "" and version or nil }
+					vim.notify("Mason: installing " .. package.name)
+					pkg:install { version = package.version }
 				end
 			end
 		end)

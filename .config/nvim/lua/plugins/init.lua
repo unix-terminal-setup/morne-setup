@@ -48,17 +48,7 @@ return {
 				dofile(vim.g.base46_cache .. "treesitter")
 			end)
 
-			require("nvim-treesitter").install {
-				"lua",
-				"luadoc",
-				"printf",
-				"vim",
-				"vimdoc",
-				"javascript",
-				"typescript",
-				"tsx",
-				"c_sharp",
-			}
+			require("nvim-treesitter").install(require("tools").treesitter_parsers)
 
 			vim.api.nvim_create_autocmd("FileType", {
 				pattern = { "cs", "javascript", "typescript", "typescriptreact", "lua", "vim" },
