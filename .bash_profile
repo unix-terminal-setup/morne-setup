@@ -13,25 +13,13 @@ PS1+=" "    # space
 PS1+=">> "    # end prompt
 
 export PS1;
-export CLICOLOR=1
-export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
-export BASH_SILENCE_DEPRECATION_WARNING=1
-export SDKROOT=$(xcrun --sdk macosx --show-sdk-path)
 
 alias ls='lsd -Alh'
 alias gits='git status'
-alias weather='curl wttr.in/Randburg'
 alias lg='lazygit'
 alias y='yazi'
 alias gd-format='gdformat $(find . -name "*.gd" -not -path "./addons/*")'
-alias web-check='~/tools/internet-check.sh'
 alias z='zellij attach -c DEV'
-eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export ASPNETCORE_ENVIRONMENT=Development
-export PATH="/Users/morne/Library/Python/3.9/bin:$PATH"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
+export PATH="$HOME/.local/bin:$PATH"
